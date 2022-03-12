@@ -22,7 +22,9 @@
 ;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
 
-(setq doom-font (font-spec :family "SauceCodePro Nerd Font" :size 14))
+(setq doom-font (font-spec :family "Mazer" :size 22))
+(setq doom-big-font (font-spec :family "Mazer" :size 28))
+(setq doom-variable-pitch-font (font-spec :family "Mazer" :size 22))
 
 
 (setq doom-theme 'doom-dracula)
@@ -60,8 +62,6 @@
 ;;(after! editorconfig)
 ;;  (add-to-list 'editorconfig-indentation-alist '(coffee-mode coffee-tab-width)))
 
-(setq org-roam-directory "~/notes/roam")
-(org-roam-db-autosync-mode)
 
 
 ;; in $DOOMDIR/config.el
@@ -78,11 +78,7 @@
 
 (setq org-brain-path "~/notes/brain")
 
-(projectile-add-known-project "~/projects/efi-inventory-scan-py")
-(projectile-add-known-project "~/projects/slack-export")
-(projectile-add-known-project "~/projects/efi-inventory-scan")
-(projectile-add-known-project "~/projects/python/stubs")
-(projectile-add-known-project "~/bec/scripts")
+(projectile-add-known-project "~/projects/efi_polling_agent")
 
 ;; TODO
 ;; Haskell formatter
@@ -105,6 +101,3 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
-(use-package! lsp-pyright
-  :config
-  (setq lsp-pyright-stub-path "/home/brenden/projects/python/stubs"))
