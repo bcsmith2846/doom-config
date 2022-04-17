@@ -158,7 +158,8 @@
        ;; (php +lsp)               ; perl's insecure younger brother
        ;;plantuml          ; diagrams for confusing people more
        ;;purescript        ; javascript, but functional
-       (python +lsp +pyenv +pyright)            ; beautiful is better than ugly
+       (python +lsp +pyenv
+               +poetry +pyright)            ; beautiful is better than ugly
        ;;qt                ; the 'cutest' gui framework ever
        ;;(racket +lsp +xp)            ; a DSL for DSLs
        ;;raku              ; the artist formerly known as perl6
@@ -167,7 +168,7 @@
        ;;(ruby +rails)     ; 1.step {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"}
        ;;(rust +lsp)              ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
        ;;scala             ; java, but good
-       ;; (scheme +guile)   ; a fully conniving family of lisps
+       ;;(scheme +guile)   ; a fully conniving family of lisps
        ;;sh                ; she sells {ba,z,fi}sh shells on the C xor
        ;;sml
        ;;solidity          ; do you need a blockchain? No.
