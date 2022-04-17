@@ -22,9 +22,9 @@
 ;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
 
-(setq doom-font (font-spec :family "Mazer" :size 22))
-(setq doom-big-font (font-spec :family "Mazer" :size 28))
-(setq doom-variable-pitch-font (font-spec :family "Mazer" :size 22))
+(setq doom-font (font-spec :family "Mazer" :size 15))
+(setq doom-big-font (font-spec :family "Mazer" :size 22))
+(setq doom-variable-pitch-font (font-spec :family "Mazer" :size 15))
 
 
 (setq doom-theme 'doom-dracula)
@@ -34,18 +34,13 @@
 
 (doom-themes-visual-bell-config)
 (doom-themes-neotree-config)
-(doom-themes-treemacs-config)
-(doom-themes-org-config)
-
-(setq +treemacs-git-mode "deferred")
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 
-;; If you use `org' and don't want your org files in the default location below,
-;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/notes/")
+;; This is the location for storing secrets. It is GPG encrypted. Github toekns go here
+(setq auth-sources '("~/.authinfo.gpg"))
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -55,35 +50,14 @@
 (after! spell-fu
   (setq spell-fu-idle-delay 0.5))  ; default is 0.25
 
-;; Change docker starting opts
-(setq docker-image-run-arguments '("-i" "-t" "--rm"))
-
 ;; Add mode to editorconfig
 ;;(after! editorconfig)
 ;;  (add-to-list 'editorconfig-indentation-alist '(coffee-mode coffee-tab-width)))
 
 
-
-;; in $DOOMDIR/config.el
-(after! rustic
-  (setq rustic-lsp-server 'rust-analyzer))
-
-
-(custom-set-faces!
-  '(aw-leading-char-face
-    :foreground "white" :background "red"
-    :weight bold :height 2.5 :box (:line-width 10 :color "red")))
-
-
-
-(setq org-brain-path "~/notes/brain")
-
 (projectile-add-known-project "~/projects/efi_polling_agent")
-
-;; TODO
-;; Haskell formatter
-;;(after!
-;;  (setq lsp-haskell-formatting-provider "brittany"))
+(projectile-add-known-project "~/projects/poller")
+(projectile-add-known-project "~/projects/go/src/github.com/bcsmith2846/goping")
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
